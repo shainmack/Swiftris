@@ -18,6 +18,8 @@
 		1C493DF923E16E56008935A3 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 1C493DF823E16E56008935A3 /* Sounds */; };
 		1C493DFB23E16E65008935A3 /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 1C493DFA23E16E65008935A3 /* Sprites.atlas */; };
 		1C493DFD23E1730D008935A3 /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C493DFC23E1730D008935A3 /* Array2D.swift */; };
+		1C493DFF23E17994008935A3 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C493DFE23E17994008935A3 /* Block.swift */; };
+		1C493E0123E17D8A008935A3 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C493E0023E17D8A008935A3 /* Shape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		1C493DF823E16E56008935A3 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		1C493DFA23E16E65008935A3 /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
 		1C493DFC23E1730D008935A3 /* Array2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
+		1C493DFE23E17994008935A3 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		1C493E0023E17D8A008935A3 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				1C493DEF23E16992008935A3 /* LaunchScreen.storyboard */,
 				1C493DF223E16992008935A3 /* Info.plist */,
 				1C493DFC23E1730D008935A3 /* Array2D.swift */,
+				1C493DFE23E17994008935A3 /* Block.swift */,
+				1C493E0023E17D8A008935A3 /* Shape.swift */,
 			);
 			path = Swiftris;
 			sourceTree = "<group>";
@@ -158,7 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C493DE723E1698C008935A3 /* GameScene.swift in Sources */,
+				1C493E0123E17D8A008935A3 /* Shape.swift in Sources */,
 				1C493DFD23E1730D008935A3 /* Array2D.swift in Sources */,
+				1C493DFF23E17994008935A3 /* Block.swift in Sources */,
 				1C493DE923E1698C008935A3 /* GameViewController.swift in Sources */,
 				1C493DE123E1698C008935A3 /* AppDelegate.swift in Sources */,
 			);
