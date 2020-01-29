@@ -27,6 +27,7 @@
 		1C493E0B23E190BE008935A3 /* JShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C493E0A23E190BE008935A3 /* JShape.swift */; };
 		1C493E0D23E190DD008935A3 /* SShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C493E0C23E190DD008935A3 /* SShape.swift */; };
 		1C493E0F23E190F4008935A3 /* ZShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C493E0E23E190F4008935A3 /* ZShape.swift */; };
+		1C493E1123E193F9008935A3 /* Swiftris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C493E1023E193F9008935A3 /* Swiftris.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		1C493E0A23E190BE008935A3 /* JShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JShape.swift; sourceTree = "<group>"; };
 		1C493E0C23E190DD008935A3 /* SShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SShape.swift; sourceTree = "<group>"; };
 		1C493E0E23E190F4008935A3 /* ZShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZShape.swift; sourceTree = "<group>"; };
+		1C493E1023E193F9008935A3 /* Swiftris.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiftris.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				1C493E0A23E190BE008935A3 /* JShape.swift */,
 				1C493E0C23E190DD008935A3 /* SShape.swift */,
 				1C493E0E23E190F4008935A3 /* ZShape.swift */,
+				1C493E1023E193F9008935A3 /* Swiftris.swift */,
 			);
 			path = Swiftris;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				1C493E0323E18E6D008935A3 /* SquareShape.swift in Sources */,
 				1C493DE723E1698C008935A3 /* GameScene.swift in Sources */,
 				1C493E0B23E190BE008935A3 /* JShape.swift in Sources */,
+				1C493E1123E193F9008935A3 /* Swiftris.swift in Sources */,
 				1C493E0123E17D8A008935A3 /* Shape.swift in Sources */,
 				1C493DFD23E1730D008935A3 /* Array2D.swift in Sources */,
 				1C493E0723E19075008935A3 /* LineShape.swift in Sources */,
