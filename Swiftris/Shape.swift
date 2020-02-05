@@ -15,17 +15,17 @@ enum Orientation: Int, CustomStringConvertible {
     
     var description: String {
         switch self {
-            case .Zero:
-                return "0"
+        case .Zero:
+            return "0"
             
-            case .Ninety:
-                return "90"
+        case .Ninety:
+            return "90"
             
-            case .OneEighty:
-                return "180"
+        case .OneEighty:
+            return "180"
             
-            case .TwoSeventy:
-                return "270"
+        case .TwoSeventy:
+            return "270"
         }
     }
     
@@ -73,15 +73,15 @@ class Shape: Hashable, CustomStringConvertible {
     var bottomBlocks:Array<Block> {
         
         guard let bottomBlocks = bottomBlocksForOrientations[orientation] else {
-                return []
+            return []
         }
         
         return bottomBlocks
     }
     
-//    var hashValue: Int {
-//        return blocks.reduce(0) { $0.hashValue ^ $1.hashValue }
-//    }
+    //    var hashValue: Int {
+    //        return blocks.reduce(0) { $0.hashValue ^ $1.hashValue }
+    //    }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.blocks)
@@ -119,17 +119,42 @@ class Shape: Hashable, CustomStringConvertible {
     
     final func rotateBlocks(orientation: Orientation) {
         guard let blockRowColumnTranslation:Array<(columnDiff: Int, rowDiff: Int)> = blockRowColumnPositions[orientation] else {
-                     return
-                 }
+            return
+        }
         for (idx, diff) in blockRowColumnTranslation.enumerated() {
-                     blocks[idx].column = column + diff.columnDiff
-                     blocks[idx].row = row + diff.rowDiff
-                 }
-             }
+            blocks[idx].column = column + diff.columnDiff
+            blocks[idx].row = row + diff.rowDiff
+        }
+    }
+    
+    final func rotateClockwise() {
+        let newOrientation = Orientation.rotate(orientation: orientation, clockwise: true)
+        rotateBlocks(orientation: newOrientation)
+        orientation = newOrientation
+    }
+    
+    final func rotateCounterClockwise() {
+        let newOrientation = Orientation.rotate(orientation: orientation, clockwise: false)
+        rotateBlocks(orientation: newOrientation)
+        orientation = newOrientation
+    }
     
     final func lowerShapeByOneRow() {
         shiftBy(columns: 0, rows: 1)
     }
+    
+    final func raiseShapeByOneRow() {
+        shiftBy(columns: 0, rows: -1)
+    }
+    
+    final func shiftRightByOneColumn() {
+        shiftBy(columns: 1, rows: 0)
+    }
+    
+    final func shiftLeftByOneColumn() {
+        shiftBy(columns: -1, rows: 0)
+    }
+    
     
     final func shiftBy(columns: Int, rows: Int) {
         self.column += columns
@@ -148,28 +173,28 @@ class Shape: Hashable, CustomStringConvertible {
     
     
     final class func random(startingColumn:Int, startingRow:Int) -> Shape {
-             switch Int(arc4random_uniform(NumShapeTypes)) {
-                
-             case 0:
-                 return SquareShape(column:startingColumn, row:startingRow)
-             case 1:
-                 return LineShape(column:startingColumn, row:startingRow)
-             case 2:
-                 return TShape(column:startingColumn, row:startingRow)
-             case 3:
-                 return LShape(column:startingColumn, row:startingRow)
-             case 4:
-                 return JShape(column:startingColumn, row:startingRow)
-             case 5:
-                 return SShape(column:startingColumn, row:startingRow)
-             default:
-                 return ZShape(column:startingColumn, row:startingRow)
-             }
-         }
+        switch Int(arc4random_uniform(NumShapeTypes)) {
+            
+        case 0:
+            return SquareShape(column:startingColumn, row:startingRow)
+        case 1:
+            return LineShape(column:startingColumn, row:startingRow)
+        case 2:
+            return TShape(column:startingColumn, row:startingRow)
+        case 3:
+            return LShape(column:startingColumn, row:startingRow)
+        case 4:
+            return JShape(column:startingColumn, row:startingRow)
+        case 5:
+            return SShape(column:startingColumn, row:startingRow)
+        default:
+            return ZShape(column:startingColumn, row:startingRow)
+        }
+    }
     
     static func ==(lhs: Shape, rhs: Shape) -> Bool{
         return lhs.row == rhs.row && lhs.column == rhs.column
     }
 }
-    
+
 
