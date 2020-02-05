@@ -51,9 +51,6 @@ class Block: Hashable, CustomStringConvertible {
         return color.spriteName
     }
     
-//    var hashValue: Int {
-//        return self.column ^ self.row
-//    }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.column)

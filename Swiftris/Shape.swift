@@ -78,10 +78,7 @@ class Shape: Hashable, CustomStringConvertible {
         
         return bottomBlocks
     }
-    
-    //    var hashValue: Int {
-    //        return blocks.reduce(0) { $0.hashValue ^ $1.hashValue }
-    //    }
+
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.blocks)
